@@ -55,9 +55,9 @@ class Planet(db.Model):
 class Favorite_People(db.Model):
     __tablename__ = 'Favorite_People'
 
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), primary_key=True, nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), primary_key=True)
     user = db.relationship("User")
-    people_id = db.Column(db.Integer, db.ForeignKey('people.id'), primary_key=True, nullable=True)
+    people_id = db.Column(db.Integer, db.ForeignKey('people.id'), primary_key=True)
     people = db.relationship("People")
     
     
